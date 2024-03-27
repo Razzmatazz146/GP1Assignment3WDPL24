@@ -15,6 +15,7 @@ extends Node2D
 @onready var door_particles = $DoorParticles
 @onready var wood_smash = $wood_smash_sfx
 @onready var fire_light_sfx = $FireSprite/FireLightingSFX
+@onready var overlay = $DarkOverlay
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
