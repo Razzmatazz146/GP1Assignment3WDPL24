@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyc7flg6mwt2b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a4r2y"]
+load_path = "res://.godot/imported/Layer_0009_2.png-51dbaf132adb6718552d90cb81af0456.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uoeuj"]
+load_path = "res://.godot/imported/Layer_0008_3.png-d8fbe20ec4820a0b8c5ce7084b6c63c4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ln8ql"]
+load_path = "res://.godot/imported/Layer_0006_4.png-0773b4258ab20dad133709ded48f8060.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8g2h4"]
+load_path = "res://.godot/imported/Layer_0005_5.png-4ea6a2a8a4ba6492b92834dac5c7f83d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sr8yh"]
+load_path = "res://.godot/imported/Layer_0003_6.png-39bfd4609b8e4e944a6f4dc9ff414f6d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emhgl"]
+load_path = "res://.godot/imported/Layer_0002_7.png-b38cc7dc377817cd810499b1de8098e6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgvcj"]
+load_path = "res://.godot/imported/Layer_0001_8.png-815c2fc255a0cafc988108b3d7d7c82a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b22de"]
+load_path = "res://.godot/imported/Layer_0000_9.png-b859fbce581dcf08f65ef0719a9ef15e.ctex"
+
+[node name="BackgroundForest" type="ParallaxBackground"]
+offset = Vector2(0, -50)
+transform = Transform2D(1, 0, 0, 1, 0, -50)
+follow_viewport_enabled = true
+scroll_base_scale = Vector2(0.6, 0)
+
+[node name="ParallaxLayerBack" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack"]
+texture = SubResource("CompressedTexture2D_a4r2y")
+
+[node name="ParallaxLayerFront" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.14, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteFront" type="Sprite2D" parent="ParallaxLayerFront"]
+texture = SubResource("CompressedTexture2D_uoeuj")
+
+[node name="ParallaxLayerBack2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.18, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack2"]
+texture = SubResource("CompressedTexture2D_ln8ql")
+
+[node name="ParallaxLayerBack3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.25, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack3"]
+texture = SubResource("CompressedTexture2D_8g2h4")
+
+[node name="ParallaxLayerBack4" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.33, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack4"]
+texture = SubResource("CompressedTexture2D_sr8yh")
+
+[node name="ParallaxLayerBack5" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.4, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack5"]
+texture = SubResource("CompressedTexture2D_emhgl")
+
+[node name="ParallaxLayerBack6" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack6"]
+texture = SubResource("CompressedTexture2D_hgvcj")
+
+[node name="ParallaxLayerBack7" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.66, 0)
+motion_mirroring = Vector2(928, 0)
+
+[node name="SpriteBack" type="Sprite2D" parent="ParallaxLayerBack7"]
+texture = SubResource("CompressedTexture2D_b22de")

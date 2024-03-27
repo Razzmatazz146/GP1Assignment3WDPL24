@@ -1,0 +1,242 @@
+[gd_scene load_steps=13 format=3 uid="uid://cag4bi72ooqwn"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_4rjwd"]
+[ext_resource type="Texture2D" uid="uid://86tfv0fev1vt" path="res://Assets/Sprites/vagabond/assets/aseprite-files/vagabond-idle-Sheet.png" id="2_qxrxs"]
+[ext_resource type="Texture2D" uid="uid://dwkaejta7b7lc" path="res://Assets/Sprites/vagabond/assets/aseprite-files/vagabond-run-Sheet.png" id="5_gmcle"]
+[ext_resource type="AudioStream" uid="uid://eb1qfo04oubu" path="res://Assets/Sounds/foot-step-snow-11-189862.mp3" id="5_ntk8d"]
+[ext_resource type="AudioStream" uid="uid://c6e1t3c7cwb50" path="res://Assets/Sounds/foot-step-snow-14-189867.mp3" id="6_jna0n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tg1qm"]
+radius = 7.0
+height = 26.0
+
+[sub_resource type="Animation" id="Animation_ftmf1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qxrxs")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_3sl60"]
+resource_name = "idle"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_gkj8i"]
+resource_name = "idle2"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qxrxs")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_kad7f"]
+resource_name = "run"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.3071,
+"start_offset": 0.0205,
+"stream": ExtResource("5_ntk8d")
+}, {
+"end_offset": 0.1713,
+"start_offset": 0.049,
+"stream": ExtResource("6_jna0n")
+}],
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_elmo1"]
+resource_name = "run2"
+length = 1.00001
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_gmcle")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.2321,
+"start_offset": 0.0205,
+"stream": ExtResource("5_ntk8d")
+}, {
+"end_offset": 0.1958,
+"start_offset": 0.0795,
+"stream": ExtResource("6_jna0n")
+}],
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wj2nx"]
+_data = {
+"RESET": SubResource("Animation_ftmf1"),
+"idle": SubResource("Animation_3sl60"),
+"idle2": SubResource("Animation_gkj8i"),
+"run": SubResource("Animation_kad7f"),
+"run2": SubResource("Animation_elmo1")
+}
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 7
+script = ExtResource("1_4rjwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_qxrxs")
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_tg1qm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+"": SubResource("AnimationLibrary_wj2nx")
+}
+autoplay = "idle2"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-6, -87)
+zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -20.8
+bus = &"SFX"
