@@ -1,7 +1,10 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://chigs7s3dec7q"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://chigs7s3dec7q"]
 
 [ext_resource type="Texture2D" uid="uid://vee6txhj1dvd" path="res://Assets/Tileset/mk_16_16_nature_tileset_godot/tileset_mk_16_16_nature_tileset_godot.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dwbfm1wscu58v" path="res://Assets/Tileset/QuietCabin/QC_0Quiet Cabin TileSet 16x16.png" id="2_vde3h"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2qhag"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iadkp"]
 texture = ExtResource("1")
@@ -10,6 +13,7 @@ texture = ExtResource("1")
 25:0/0/physics_layer_0/angular_velocity = 0.0
 25:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -6, 8, -6, 8, 8, -6, 8)
 26:0/0 = 0
+26:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_2qhag")
 26:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 26:0/0/physics_layer_0/angular_velocity = 0.0
 26:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6, 8, -6, 8, 8, -8, 8)
@@ -927,6 +931,7 @@ texture = ExtResource("2_vde3h")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [resource]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_iadkp")
 sources/12 = SubResource("TileSetAtlasSource_37a58")

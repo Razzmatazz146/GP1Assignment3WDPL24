@@ -2,10 +2,10 @@ extends Node2D
 
 @onready var playerBody = $Player
 @onready var fire_sfx = $FireSprite/FireSFX
-@onready var can_light = false
-@onready var can_door = false
-@onready var has_doored = false
-@onready var is_lit = false
+var can_light = false
+var can_door = false
+var has_doored = false
+var is_lit = false
 @onready var interactLabel = $Player/Label
 @onready var fireLight = $"FireSprite/Fire Light"
 @onready var fireSmoke = $FireSprite/FireSmoke
@@ -19,10 +19,16 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	can_door = false
+	interactLabel.visible = false
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var sin_timer = $Player/Timer
+	if not sin_timer.time_left == 0:
+		can_door = false
+		interactLabel.visible = false
 	
 	if Input.is_action_just_pressed("interact"):
 		if can_light:
